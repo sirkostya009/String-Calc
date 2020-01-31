@@ -1,8 +1,10 @@
 #include <string>
 
+// these funcs are being told about in comments of ids.cpp
 long id1stNum_finder(int j, std::string str);
 long id2ndNum_finder(int j, std::string str);
 
+// returns the length of an integer
 int getNumOfNums(long long integer) {
 	int ret{};
 
@@ -14,6 +16,7 @@ int getNumOfNums(long long integer) {
 	return ret;
 }
 
+// long long to string, name is quite self-explanatory
 std::string llToString(long long integer) {
 	std::string str{};
 
@@ -31,6 +34,10 @@ std::string llToString(long long integer) {
 	return ret;
 }
 
+/*
+* gets the original string, replaces mathematical operator and -
+* - two numbers around it with a result, and return new string
+*/
 std::string elimination(int j, long long replacement, std::string str, bool isLast) {
 	int id1stNum{ id1stNum_finder(j, str) };
 	int id2ndNum{ id2ndNum_finder(j, str) };
@@ -55,6 +62,7 @@ std::string elimination(int j, long long replacement, std::string str, bool isLa
 	return ret;
 }
 
+// counts how many division and multiplication operators are in the string
 int division_and_multi(std::string str) {
 	int ret{};
 
@@ -65,6 +73,7 @@ int division_and_multi(std::string str) {
 	return ret;
 }
 
+// counts how many substraction and addition operators are in the string
 int addition_and_substraction(std::string str) {
 	int ret{};
 
