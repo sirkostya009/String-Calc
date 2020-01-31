@@ -16,9 +16,12 @@ int division_and_multi(std::string str);
 
 std::string elimination(int j, long long replacement, std::string str, bool isLast);
 
+// does, uh, well, math
 void doMath(std::string str) {
+	// localvar keeps track of how many operations are remaining to do
 	int localvar{ division_and_multi(str) };
-
+	
+	// this is a one-case variable kept here to watch if operation is a last one to be done
 	int isLast{ division_and_multi(str) + addition_and_substraction(str) - 1 };
 
 	unsigned __int64 size{ str.length() };
