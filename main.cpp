@@ -18,7 +18,7 @@ std::string elimination(int j, long long replacement, std::string str, bool isLa
 
 // does, uh, well, math
 void doMath(std::string str) {
-	// localvar keeps track of how many operations are remaining to do
+	// localvar keeps track of how many operations are remaining to be done
 	int localvar{ division_and_multi(str) };
 	
 	// this is a one-case variable kept here to watch if operation is a last one to be done
